@@ -2090,6 +2090,13 @@ fieldset[disabled] .btn-default.active {
   background-color: #ffffff;
   border-color: #cccccc;
 }
+.bg-dark {
+    background-color: #343a40 !important;
+}
+
+.bg-secondary {
+    background-color: #6c757d !important;
+}
 
 .btn-primary {
   color: #ffffff;

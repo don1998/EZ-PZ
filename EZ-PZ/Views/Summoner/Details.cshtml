@@ -4,62 +4,40 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
-
 <div>
-    <h4>Summoner</h4>
+    <h4>Profile</h4>
     <hr />
-    
-    <div class="card" style="width: 15%">
-        <div class="card-header">
-            <center>@Html.DisplayFor(model => model.summonerName)</center>   
-        </div>
-        <img class="card-img-top" src="@Html.DisplayFor(model => model.profileIcon)"/>
-        <div class="card-body">
-            <center>
-                <span class="badge">@Html.DisplayFor(model => model.summonerLevel)</span>
-            </center>        
-        </div> 
-        <div class="card-footer">
-            <center><button type="button" class="btn-primary">Update</button></center>
-        </div>
+
+
+    <div class="container">
+
+            <div class="col-sm-4">
+                    <div class="card" style="width: 70%;" align="center">
+                        <div class="card-header bg-secondary">
+                            <font size="5">@Html.DisplayFor(model => model.summonerName)</font>
+                        </div>
+                        <img class="card-img-top" src="@Html.DisplayFor(model => model.profileIcon)" />
+                        <div class="card-body bg-dark">
+                            <span class="badge"><font color="black">@Html.DisplayFor(model => model.summonerLevel)</font></span>
+                        </div>
+                        <div class="card-footer bg-secondary">
+                            <button type="button" class="btn-danger" style="border-radius:8px;">Update</button>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="/">Total      </a>
+                            <a class="navbar-brand"href="/">Ranked Solo      </a>
+                            <a class="navbar-brand" href="/">Ranked Flex      </a>
+                        </div>
+                     </div>
+                  </div>
+                <container>
+                    
+                </container>
+            </div>
     </div>
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.summonerName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.summonerName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.summonerLevel)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.summonerLevel)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.revisionDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.revisionDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.accountId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.accountId)
-        </dd>
-
-    </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.summonerId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

@@ -26,7 +26,7 @@ namespace EZ_PZ.Controllers
             Summoner summ;
             using (var client = new HttpClient())
             {
-                String test = "https://na1.api.riotgames.com/lol/summoner/v3/summoners/by-name/" + name + "?api_key=RGAPI-c9657255-754a-4b35-b382-56d6635d7083";
+                String test = "https://na1.api.riotgames.com/lol/summoner/v3/summoners/by-name/" + name + "?api_key=RGAPI-a96d441a-123e-40ec-a6d2-d9a3b0c4a65b";
                 var uri = new Uri(test);
 
                 var response = client.GetAsync(uri).Result;
